@@ -401,7 +401,7 @@ const Products = () => {
 
   const toggleAvailability = async (productId, currentStatus) => {
     try {
-      await axiosInstance.patch(`/api/v1/products/${productId}`, {
+       await axiosInstance.put(`/api/v1/products/${productId}`, {
         availability: !currentStatus,
       });
 
